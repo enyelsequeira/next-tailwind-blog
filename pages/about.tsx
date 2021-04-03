@@ -1,10 +1,9 @@
 import React from 'react'
-import Cards from '../components/cards/cards'
 
 const About = () => {
   return (
     <>
-    <Cards/>
+    <p>about page</p>
     </>
   )
 
