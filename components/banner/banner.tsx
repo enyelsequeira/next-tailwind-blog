@@ -3,7 +3,7 @@ import { buttonClasses } from '../hero/hero'
 
 const Banner = () => {
   return (
-    <div className="border-black border my-8 mx-auto md:w-full lg:w-4/5 shadow-personal flex-col lg:flex lg:flex-row justify-around p-4 md:p-8 ">
+    <div className="border-black border my-8 mx-auto md:w-full lg:w-4/5 flex-col lg:flex lg:flex-row justify-around p-4 md:p-8 filter shadow-personal  bg-special ">
       <div className="self-center font-body">
         <h3 className="uppercase text-2xl leading-relaxed md:text-center "> Subscribe now to get special features</h3>
         <p className="uppercase leading-relaxed md:text-center">subscribe and start learning</p>

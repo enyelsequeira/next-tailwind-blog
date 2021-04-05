@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { FC } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SiCoderwall } from "react-icons/si";
-import DarkModeBtn from '../dark-mode-button';
+import DarkModeBtn from '../dark-mode-button/dark-mode-button';
 const Header: FC = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   return (

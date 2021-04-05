@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import Footer from '../footer/footer'
-import Header from '../header/header'
+import Footer from '../../components/footer/footer'
+import Header from '../../components/header/header'
 
-const Layout: FC = ({children}) => {
+const PageLayout: FC = ({children}) => {
   return (
     <main className="max-w-screen-xl m-auto border-black border-4">
       <Header/>
@@ -12,4 +12,4 @@ const Layout: FC = ({children}) => {
   )
 }
 
-export default Layout
+export default PageLayout

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
-import { techList } from '../../constants/constants.tsx'
+import { techList } from '../../utils/constants/constants'
 const spanClasses: string = `text-red-600 font-bold uppercase text-xl`
 export const buttonClasses: string = ` bg-button-light dark:bg-button-dark p-4 px-12 rounded-lg text-lg font-display font-bold text-words-light dark:text-words-dark my-4 lg:my-8 `
 export const paragraphClasses: string = `my-4 text-2xl leading-normal`

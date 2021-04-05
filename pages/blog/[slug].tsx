@@ -7,7 +7,7 @@ import renderToString from 'next-mdx-remote/render-to-string';
 import path from 'path';
 import readingTime from "reading-time";
 import MDXComponents from '../../components/MDXComponents/MDXComponents';
-import BlogLayout from "../../layouts/blog-layout";
+import BlogLayout from "../../layouts/blog-layout/blog-layout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
 
@@ -43,7 +43,7 @@ export const getStaticProps = async ({ params }) => {
     },
     scope: data,
   })
-
+  
   return {
     props: {
       source: mdxSource,

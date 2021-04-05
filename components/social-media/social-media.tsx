@@ -14,7 +14,7 @@ const socialIcons = `self-center mx-4 text-4xl`
 const Social = () => {
   return (
     <div className={socialClasses}>
-      <h4 className="text-5xl">Social Media</h4>
+      <h4 className="text-5xl ">Social Media</h4>
       <p className={`${paragraphClasses} text-4xl`}>Follow for more content 😀</p>
       <ul className={socialList}>
 
@@ -36,7 +36,7 @@ const Social = () => {
               Instagram
 
             </span>
-            <span className="flex justify-start w-4/12">
+            <span className="flex justify-start w-4/12  ">
               <AiFillInstagram className={socialIcons} />
             </span>
           </li>

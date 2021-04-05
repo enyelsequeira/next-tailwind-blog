@@ -10,6 +10,7 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      special: "rgba( 255, 255, 255, 0.20 )",
       nav:{
         light: '#f39189',
         dark: '#1e5f74',
@@ -42,5 +43,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography")
+  ],
 };
+
+
