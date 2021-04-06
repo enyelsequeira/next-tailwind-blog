@@ -33,6 +33,7 @@ module.exports = {
       personal: "0 8px 8px 0 rgba( 31, 38, 135, 0.37 )"
 
     },
+    
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
       body: ['Cabin', 'sans-serif'],
@@ -40,8 +41,44 @@ module.exports = {
     extend: {
       gridTemplateColumns:{
         "cards": "repeat(auto-fill, minmax(450px, 1fr))"
+      },
+      typography: (theme) => ({
+         
+        DEFAULT: {
+          css: {
+            "max-width": "74ch",
+            "width": "100%",
+            color: "inherit",
+            padding: "1rem",
+            a: {
+              color: '#1864af',
+              textDecoration: 'none',
+              '&:hover': {
+                color: '#414e4e',
+              },
+            },
+            pre:{
+              padding: ".5rem",
+              margin: ".5rem",
+              background: "#2A2D40",
+              color: "#c56724"
+            },
+            ".remark-code-title":{
+              color: "#4a9fb4"
+            },
+            'h1, h2, h3, h4, h5, h6': {
+              color: theme('colors.red.400'),
+            },
+            strong:{
+              color: theme("colors.red.600"),
+            },
+            "p > code":{
+              color: theme("colors.red.200")
+            }
+          },
+        },
       }
-    },
+  )},
   },
   plugins: [
     require("@tailwindcss/typography")

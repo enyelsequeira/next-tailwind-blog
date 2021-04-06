@@ -14,7 +14,7 @@ export interface Post {
   slug: string,
   image: string,
   author: string
-  id: number
+  id?: number
   keywords: string[]
 }
 

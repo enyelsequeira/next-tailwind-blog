@@ -10,7 +10,9 @@ keywords:
   - web app
   - Javascript
   - Node
-  - TypeScipt''
+  - TypeScript
+authorImage: /images/3.jpeg
+authorProfession: Web-Developer
 ---
 
 Whenever I work with Firebase, I always seem to run into small issues that can be very annoying (yet simple) to solve. When I tried to connect my Flutter application to a Firebase backend for one of my personal projects, I ran into some small issues that set me back some time. Because of this, I decided to write a simple and straightforward article showing you how to connect your Flutter application to a firebase backend for both IOS and Android. After this tutorial, you will be all set to add authentication, cloud Firestore, or any other Firebase feature you might want.
@@ -26,6 +28,9 @@ Whenever I work with Firebase, I always seem to run into small issues that can b
 - [Add Firebase to IOS](#add-firebase-to-ios)
 
 - [Finishing Up](#finishing-up)
+
+[I'm an inline-style link](https://www.google.com)
+
 
 ## Pre Reqs
 
@@ -82,13 +87,15 @@ Step 2
 
 ![Firebase Console](/images/1.jepg)
 
-6. Lastly, in the app level build.gradle file (same file as above), find the applicationId and change it to the name you chose in step 2. In my case I used com.benjamincarlson.medium_tutorial.
+6. Lastly, in the app level build.gradle file (same file as above), 
 
-![Firebase Console](/images/2.jepg)
+7. find the applicationId and change it to the name you chose in step 2.  In my case I used com.benjamincarlson.medium_tutorial.
+
+![Firebase Console](/images/1.jepg)
 
 At this point we are done. Run the app with an android emulator and make sure everything works. You should see the following image below if everything works as expected.
 
-![Firebase Console](/images/1.jepg)
+![Firebase Console](/images/3.jpeg)
 
 ## Add Firebase to IOS
 
@@ -98,7 +105,7 @@ Click on the IOS Icon from the overview page
 
 Enter the IOS bundle ID. This can be found by opening your project in Xcode -> click on runner (top right) -> general tab -> Identity
 
-![Firebase Console](/images/2.jepg)
+![Firebase Console](/images/3.jpeg)
 
 I changed mine from com.example.mediumTutorial to com.benjamincarlson.mediumTutorial.
 
@@ -117,6 +124,12 @@ The last thing you want to do is open up pubspec.yaml and add the following unde
 ```dart:pubspec.yaml
 firebase_auth: ^0.14.0+5
 cloud_firestore: ^0.12.9+4
+```
+
+```javascript:jsx
+ const data = (html, tal) => {
+   return <p> {html} </p>
+ }
 ```
 
 Any other firebase tools you want to use will be added here as well.
