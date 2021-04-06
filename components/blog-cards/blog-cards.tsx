@@ -12,7 +12,7 @@ const BlogCards: FC<Props> = ({ post }) => {
   console.log(post, "hellos");
 
   return (
-    <div className=" border-gray-800 border-2 rounded-lg">
+    <div className="rounded-lg">
       <Link href={`/blog/${post.slug}`}>
         <a className="cursor-pointer md:p-2 flex flex-col bg-gray-50 dark:bg-words-light rounded-lg ">
 
@@ -58,8 +58,6 @@ const BlogCards: FC<Props> = ({ post }) => {
 
       </Link>
 
-
- 
 
     </div>
 

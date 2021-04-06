@@ -6,7 +6,7 @@ import { Posts } from '../../pages/blog';
 const RandomPost: FC<Posts> = ({ posts }) => {
   return (
     <>
-      <div className="border-2 my-6 p-2 shadow-personal" >
+      <div className="my-6 p-2 shadow-personal" >
         {posts.slice(0, 1).map((p, i) => {
           return (
             <Link href="/">

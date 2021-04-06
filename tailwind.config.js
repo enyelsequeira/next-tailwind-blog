@@ -1,4 +1,5 @@
-const colors = require("tailwindcss/colors")
+const colors = require("tailwindcss/colors");
+const { fontWeight } = require("tailwindcss/defaultTheme");
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', 
@@ -61,7 +62,8 @@ module.exports = {
               padding: ".5rem",
               margin: ".5rem",
               background: "#2A2D40",
-              color: "#c56724"
+              color: "#c7b7ab",
+              fontWeight: "bolder"
             },
             ".remark-code-title":{
               color: "#4a9fb4"
@@ -73,7 +75,7 @@ module.exports = {
               color: theme("colors.red.600"),
             },
             "p > code":{
-              color: theme("colors.red.200")
+              color: theme("colors.red.600")
             }
           },
         },

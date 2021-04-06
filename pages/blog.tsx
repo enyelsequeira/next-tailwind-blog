@@ -47,7 +47,7 @@ const Blog: FC<Posts> = ({ posts }) => {
 
   return (
 
-    <div className="border-4 border-blue-300 p-4" >
+    <div className="border-blue-300 p-4" >
       <p className="text-4xl text-center my-3 font-display font-bold uppercase">Blog posts {posts.length}</p>
       <SearchInput setSearchValue={setSearchValue} />
 

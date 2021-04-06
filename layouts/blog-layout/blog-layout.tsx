@@ -12,9 +12,10 @@ interface Props {
 const BlogLayout: FC<Props> = ({ data, children }) => {
   console.log({ data: data.authorImage });
   return (
-    <div className="border-2 w-full p-2">
+    <div className="w-full p-2">
       <BlogLayoutHeader {...data} />
       <div className="flex flex-col md:flex-row flex-col-reverse">
+        {/* TODO I have to change the links to use the actual blog posts  */}
         <div className="p-4 text-3xl flex items-center md:items-start md:flex-col">
           <p className="text-2xl my-2">Share</p>
           <a href={`https://twitter.com/share?text=${data.title} by: @E.S.Codes=${"enyelsequeira.com"}`}

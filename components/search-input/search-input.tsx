@@ -10,8 +10,8 @@ const SearchInput:FC<Props> = ({setSearchValue}) => {
 
 
   return (
-    <div className="bg-white shadow p-4 w-2/4 flex my-2 mx-auto">
-      <span className="w-auto flex justify-end items-center text-gray-500 p-2">
+    <div className="bg-white dark:bg-gray-500 shadow p-4 w-2/4 flex my-2 mx-auto rounded-lg">
+      <span className="w-auto flex justify-end items-center text-gray-500 dark:text-white p-2">
         <AiOutlineSearch className="text-3xl" />
       </span>
       <input className="w-full rounded p-2" type="text" placeholder="Start Searching topic" onChange={(e) => setSearchValue(e.target.value) } />
