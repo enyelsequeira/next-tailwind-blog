@@ -8,8 +8,8 @@ const MDXComponents = {
   h2: (props) => <h2 {...props} />,
   img: (props) => {
     return (
-      <div className="border-red-400 p-2 rounded-xl">
-        {props.src && <Image className="rounded-xl" width="700" height="600" src={props.src} alt={props.alt} layout="responsive"/>}
+      <div className="p-2 rounded-xl">
+        {props.src && <Image className="rounded-xl" width="500" height="300" src={props.src} alt={props.alt} layout="responsive"/>}
       </div>
     )
   }, 

@@ -7,9 +7,9 @@ const RandomPost: FC<Posts> = ({ posts }) => {
   return (
     <>
       <div className="my-6 p-2 shadow-personal" >
-        {posts.slice(0, 1).map((p, i) => {
+        {posts.slice(0, 1).map((p) => {
           return (
-            <Link href="/" key={i}>
+            <Link href="/" key={p.slug}>
               <a className=" w-full grid grid-cols-1 md:grid-cols-4 gap-3">
                 <div className="col-span-2" >
                   <Image src="/hero-image.png" width={1200}
@@ -24,7 +24,7 @@ const RandomPost: FC<Posts> = ({ posts }) => {
                     <h3 className="font-bold tracking-widest leading-loose font-display dark:text-red-200">Keywords</h3>
                     {p.keywords.map((c) => {
                       return (
-                        <p className="dark:text-white">{c}</p>
+                        <p key={c} className="dark:text-white">{c}</p>
                       )
                     })}
                   </div>
