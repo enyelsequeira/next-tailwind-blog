@@ -13,7 +13,7 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
 export default function PostPage({ source, frontMatter }) {
 
-  console.log({source: frontMatter});
+  // console.log({source: frontMatter});
   const content = hydrate(source, { 
     components: MDXComponents
   })

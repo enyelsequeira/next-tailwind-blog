@@ -66,7 +66,7 @@ type techStack ={
 
 export const getStaticProps: GetStaticProps = async () => {  
   const data = await graphQLClient.request(aboutMeInfo, variable)
-  console.log(data)
+  // console.log(data)
   const listData: techStack = await graphQLClient.request(list, v2)
   return {
     props: {

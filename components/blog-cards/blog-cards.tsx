@@ -9,7 +9,7 @@ interface Props {
   post: Post
 }
 const BlogCards: FC<Props> = ({ post }) => {
-  console.log(post, "hellos");
+  // console.log(post, "hellos");
 
   return (
     <div className="rounded-lg">

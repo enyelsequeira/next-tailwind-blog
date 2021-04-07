@@ -26,7 +26,7 @@ export interface Posts {
 
 
 const Blog: FC<Posts> = ({ posts }) => {
-  console.log(posts, "posts");
+  // console.log(posts, "posts");
   const [visible, setVisible] = useState(3)
   const [searchValue, setSearchValue] = useState("")
 
@@ -38,7 +38,7 @@ const Blog: FC<Posts> = ({ posts }) => {
   // figure out how to stop rendering the random post
   const filteredBlogPosts = posts.sort((a, b) => Number(new Date(b.publishedAt)) - Number(a.publishedAt)).filter((frontMatter) => frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()))
 
-  console.log(posts[Math.floor(Math.random() * posts.length)]);
+  // console.log(posts[Math.floor(Math.random() * posts.length)]);
   const randomPost = [Math.floor(Math.random() * posts.length)]
   // // could try to slice the first one an pass it arround
   // console.log({random: randomPost.slice(0)});
@@ -69,7 +69,7 @@ const Blog: FC<Posts> = ({ posts }) => {
       {/* // {randomPost.title} */}
       <div className="p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {filteredBlogPosts.slice(0, visible).map((data: Post) => {
-          console.log(data);
+          // console.log(data);
           return (<BlogCard key={data.title} post={data} />)
         })}
       </div>

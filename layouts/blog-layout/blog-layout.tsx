@@ -10,7 +10,7 @@ interface Props {
 
 
 const BlogLayout: FC<Props> = ({ data, children }) => {
-  console.log({ data: data.authorImage });
+  // console.log({ data: data.authorImage });
   return (
     <div className="w-full p-2">
       <BlogLayoutHeader {...data} />

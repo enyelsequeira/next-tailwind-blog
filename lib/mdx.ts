@@ -46,7 +46,7 @@ export async function getAllFileFrontMatter(type) {
   const files = fs.readdirSync(path.join(root, "data", type))
 
   return files.reduce((allPosts, postSlug) => {
-    console.log({allPosts: allPosts});
+    // console.log({allPosts: allPosts});
     const source = fs.readFileSync(
       path.join(root, "data", type, postSlug), 
       'utf-8'
