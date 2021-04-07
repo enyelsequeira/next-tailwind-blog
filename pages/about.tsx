@@ -5,7 +5,7 @@ import Body from '../components/about-body/about-body';
 import TechStack from '../components/tech-stack/tech-stack';
 import TestimonialCards from '../components/testimonials/testimonials';
 import { aboutMeInfo, graphQLClient, list, v2, variable } from "../helpers/contenful-query";
-import { Testimonial, testimonials } from '../utils/testimonials';
+import { Testimonial, testimonials } from '../utils/constants/testimonials';
 
 
 const About = ({ data, listData }) => {
@@ -35,21 +35,21 @@ export default About
 type techStack ={
   stack: string[]
 }
-interface Content{
+// interface Content{
   
-}
+// }
 
-interface data {
-  title: string,
-  aboutMe:{
-    json: {
+// interface data {
+//   title: string,
+//   aboutMe:{
+//     json: {
 
-    },
-    links: {
-      assets
-    }
-  }
-}
+//     },
+//     links: {
+//       assets
+//     }
+//   }
+// }
 
 
 export const getStaticProps: GetStaticProps = async () => {  

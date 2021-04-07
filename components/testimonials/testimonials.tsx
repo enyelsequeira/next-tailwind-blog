@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Testimonial } from "../../utils/testimonials";
+import { Testimonial } from "../../utils/constants/testimonials";
 
 interface Props{
   testimonial: Testimonial

@@ -3,8 +3,6 @@ import { AiFillHtml5 } from "react-icons/ai"
 import { DiCss3, DiJavascript1, DiNodejsSmall, DiReact } from "react-icons/di"
 import { SiGatsby, SiNextDotJs, SiServerless } from "react-icons/si"
 
-
-
 interface ListContent {
   name: string,
   icon: ReactElement
