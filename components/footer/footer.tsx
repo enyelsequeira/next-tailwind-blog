@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-5">
       <div className="flex flex-col flex-wrap lg:grid lg:grid-col-4 gap-4 ">
         <ul className="flex flex-wrap justify-between p-2 lg:px-20">
 
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </ul>
       </div>
-      <p className="uppercase font-display font-extrabold text-center my-4">   &copy; E.S.CODES. All rights reserved {new Date().getFullYear()}{' '} </p>
+      <p className="uppercase font-display font-extrabold text-center my-6">   &copy; E.S.CODES. All rights reserved {new Date().getFullYear()}{' '} </p>
 
 
     </div>

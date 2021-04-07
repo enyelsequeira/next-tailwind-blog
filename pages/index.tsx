@@ -7,12 +7,20 @@ import Social from "../components/social-media/social-media";
 export default function Home() {
  
 
+
   return (
+    
     <>
-      <Head>
-        <title>My homepage</title>
-        <link rel="icon" href="/favicon.ico" />
+        <Head>
+        <title>Home page of E.S.Codes</title>
+        <link rel="icon" href="/icon.jpg" sizes="32x32" />
+        <meta name="robots" content="follow, index" />
+        <meta name="description" content="this is the starter page of the blog E.S.CODES" />
+        <meta property="og:description" content="this is the starter page of the blog E.S.CODES" />
+      
+       
       </Head>
+  
       <Hero/>
       <Social/>
       <Banner/>

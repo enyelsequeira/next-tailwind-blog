@@ -7,7 +7,7 @@ interface Props{
 }
 const PageLayout:FC<Props> = ({children}) => {
   return (
-    <main className="max-w-screen-xl m-auto border-black border-4">
+    <main className="max-w-screen-xl m-auto">
       <Header/>
       {children}
       <Footer/>

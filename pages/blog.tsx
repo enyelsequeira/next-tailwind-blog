@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { FC, useState } from 'react';
 import { VscLoading } from "react-icons/vsc";
 import BlogCard from '../components/blog-cards/blog-cards';
@@ -46,6 +47,17 @@ const Blog: FC<Posts> = ({ posts }) => {
 
 
   return (
+  <>
+  <Head>
+    <title>Blog Cards where you can find useful information and articles</title>
+    <link rel="icon" href="/icon.jpg" sizes="32x32" />
+    <meta name="robots" content="follow, index" />
+    <meta name="description" content="Blog page where you can find all the information related to coding that the writer can share with you" />
+    <meta property="og:description" content="Blog page where you can find all the information related to coding that the writer can share with you"/>
+  
+   
+  </Head>
+
 
     <div className="border-blue-300 p-4" >
       <p className="text-4xl text-center my-3 font-display font-bold uppercase">Blog posts {posts.length}</p>
@@ -68,6 +80,7 @@ const Blog: FC<Posts> = ({ posts }) => {
       </button>
 
     </div>
+    </>
   )
 }
 

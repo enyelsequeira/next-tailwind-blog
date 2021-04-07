@@ -1,5 +1,6 @@
 
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import Body from '../components/about-body/about-body';
 import TechStack from '../components/tech-stack/tech-stack';
@@ -11,6 +12,16 @@ import { Testimonial, testimonials } from '../utils/constants/testimonials';
 const About = ({ data, listData }) => {
 
   return (
+    <>
+    <Head>
+    <title>About Page</title>
+    <link rel="icon" href="/icon.jpg" sizes="32x32" />
+    <meta name="robots" content="follow, index" />
+    <meta name="description" content="About page where you can find information about the writer of the blog" />
+    <meta property="og:description" content="About page where you can find information about the writer of the blog"/>
+  
+   
+  </Head>
     <section className="flex flex-col md:grid md:grid-cols-4  my-4 p-2 md:p-4 gap-3">
       <div className="p-2 rounded-lg md:col-start-1 md:self-center md:col-end-3 ">
         <Image className="rounded-2xl shadow-lg shadow-inner" width="700" height="500 " src={data.aboutHero.aboutMe.links.assets.block[0].url} />
@@ -24,6 +35,7 @@ const About = ({ data, listData }) => {
       })}
       </div>
     </section>
+    </>
   )
 
 }
