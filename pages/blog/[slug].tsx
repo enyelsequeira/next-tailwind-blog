@@ -1,7 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from "mdx-prism";
-import { InferGetStaticPropsType } from 'next';
 import hydrate from 'next-mdx-remote/hydrate';
 import renderToString from 'next-mdx-remote/render-to-string';
 import path from 'path';
@@ -12,7 +11,7 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
 
 
-export default function PostPage({ source, frontMatter }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function PostPage({ source, frontMatter }) {
 
   console.log({source: frontMatter});
   const content = hydrate(source, { 
