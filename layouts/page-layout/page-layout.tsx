@@ -1,8 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 
-const PageLayout: FC = ({children}) => {
+interface Props{
+  children: ReactNode
+}
+const PageLayout:FC<Props> = ({children}) => {
   return (
     <main className="max-w-screen-xl m-auto border-black border-4">
       <Header/>

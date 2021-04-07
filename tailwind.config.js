@@ -34,6 +34,9 @@ module.exports = {
       personal: "0 8px 8px 0 rgba( 31, 38, 135, 0.37 )"
 
     },
+    height:{
+      card: "390px"
+    },
     
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
@@ -42,6 +45,9 @@ module.exports = {
     extend: {
       gridTemplateColumns:{
         "cards": "repeat(auto-fill, minmax(450px, 1fr))"
+      },
+      gridTemplateRows:{
+        "testimonials": "250px, 1fr"
       },
       typography: (theme) => ({
          

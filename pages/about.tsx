@@ -1,58 +1,29 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { gql, GraphQLClient } from 'graphql-request';
-import React from 'react';
+
+import { GetStaticProps } from "next";
+import Image from "next/image";
+import Body from '../components/about-body/about-body';
+import TechStack from '../components/tech-stack/tech-stack';
+import TestimonialCards from '../components/testimonials/testimonials';
+import { aboutMeInfo, graphQLClient, list, v2, variable } from "../helpers/contenful-query";
+import { Testimonial, testimonials } from '../utils/testimonials';
 
 
-const Bold = ({ children }) => <p>{children}</p>;
-
-const Text = ({ children }) => <p >{children}</p>;
-
-
-
-
-const About = ({ data }) => {
-  console.log("data from top", data);
-  const options ={
-
-    renderMark: {
-      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-    },
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) =>{
-        return(
-          <div>
-            <p className="text-red-900">{children}</p>
-          </div>
-        )
-      },
-      [BLOCKS.HEADING_1]: (node, children) => <h1 className="text-red-600 text-5xl">{children}</h1>,
-      [BLOCKS.EMBEDDED_ASSET]: (node, next) => {
-        // const img = data.links.assets.block.find(i => i.sys.id === node.data.target.sys.id)
-        const test = data.aboutHero.aboutMe.links.assets.block[0].url;
-        console.log(node, { node: node });
-        return <img className="border-4 col-start-2 row-start-1" src={test} />
-      }
-
-    },
-    renderText: text => {
-      return text
-        .split("\n")
-        .map(i => [i, <br />])
-        .flat();
-    }
-
-
-
-
-  }
-
+const About = ({ data, listData }) => {
 
   return (
-    <div className="border-4 border-red-300 grid grid-cols-2">
-      {/* {data.node.description && renderRichText(data.node.description)} */}
-      {data && documentToReactComponents(data.aboutHero.aboutMe.json, options)}
-    </div>
+    <section className="flex flex-col md:grid md:grid-cols-4  my-4 p-2 md:p-4 gap-3">
+      <div className="p-2 rounded-lg md:col-start-1 md:self-center md:col-end-3 ">
+        <Image className="rounded-2xl shadow-lg shadow-inner" width="700" height="500 " src={data.aboutHero.aboutMe.links.assets.block[0].url} />
+      </div>
+      <Body {...data} />
+      <TechStack techStack={listData.techStack} />
+      <div className="flex flex-col lg:my-6 md:col-start-1 md:col-end-5 lg:grid md:grid-cols-3 md:grid-rows-testimonials md:gap-3">
+        <p className="text-3xl text-center col-span-4 my-4 font-display">Testimonials</p>
+      {testimonials.map((testimonial: Testimonial) => {
+        return  <TestimonialCards key={testimonial.id} testimonial={testimonial} />
+      })}
+      </div>
+    </section>
   )
 
 }
@@ -60,44 +31,35 @@ const About = ({ data }) => {
 export default About
 
 
-export async function getStaticProps() {
 
-  const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`
+type techStack ={
+  stack: string[]
+}
+interface Content{
+  
+}
 
-  const graphQLClient = new GraphQLClient(endpoint, {
-    headers: {
-      authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+interface data {
+  title: string,
+  aboutMe:{
+    json: {
+
     },
-  })
-
-  const query = gql`
-    query getMovie($id: String!) {
-      aboutHero(id: $id) {
-        title
-        aboutMe{
-          json
-          links{
-        assets{
-          block{
-            url
-            title
-          }
-        }
-      }
-        }
-      }
+    links: {
+      assets
     }
-  `
-
-  const variable = {
-    id: "4QR6ZgrSwDosobxFIDEeg3"
   }
-  const data = await graphQLClient.request(query, variable)
-  console.log({ datingmy: data.aboutHero.aboutMe });
+}
 
+
+export const getStaticProps: GetStaticProps = async () => {  
+  const data = await graphQLClient.request(aboutMeInfo, variable)
+  console.log(data)
+  const listData: techStack = await graphQLClient.request(list, v2)
   return {
     props: {
-      data
+      data,
+      listData
     }
   }
 }
