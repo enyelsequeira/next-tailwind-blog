@@ -4,7 +4,7 @@ import { paragraphClasses } from "../hero/hero"
 const socialClasses = `flex-col flex p-4 font-body`
 
 const socialList = ` flex flex-col md:grid md:grid-cols-cards justify-items-center gap-7 p-4`
-const socialItem = `border-2 border-red-500 w-full flex self-center justify-center py-4 transform hover:scale-105 motion-reduce:transform-none transition duration-700 ease-in-out`
+const socialItem = `border-2 border-red-500 w-full flex self-center justify-center py-4 transform hover:scale-105 motion-reduce:transform-none transition duration-700 ease-in-out my-2`
 const socialLink = `flex justify-items-center text-2xl  w-full items-center justify-around`
 const socialIcons = `self-center mx-4 text-4xl`
 
