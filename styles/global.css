@@ -1,41 +1,7 @@
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-html {
-  height: 100%;
-  box-sizing: border-box;
-  touch-action: manipulation;
-  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-html,
-body {
-  font-family: var(--font-sans);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-
-body {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active
-{
- -webkit-box-shadow: 0 0 0 30px rgb(221, 194, 194) inset !important;
-}
-
 @tailwind base;
+@import "./main.css";
+
 @tailwind components;
+
 @tailwind utilities;
