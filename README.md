@@ -23,7 +23,7 @@ The entire codebase consists in **Javascript**
 
 Here is a list of technologies used:
 
-- **React**: Front-end framework
+- **React** **TypeScript**: Front-end framework
 - **NEXTJS** : Gatsby react framework
 - **Taildind** : CSS Framework
 - **Contentful**: CMS being used to get all of the data
