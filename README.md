@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+[![Blog](/public/about-me.png)](https://live-blog-phi.vercel.app/)
+![Status](https://img.shields.io/badge/status-on--going-blue)
+[![GitHub issues](https://img.shields.io/github/issues/enyelsequeira/next-tailwind-blog?style=flat-square)](https://github.com/enyelsequeira/next-tailwind-blog/issues)
+### Live-Code-Blog Using JAM STACK
 
-First, run the development server:
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Introduction
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This application was built as part of a live-webinar I was hosting for Practicum by Yandex bootcamp students. It a web application using the JAM stack.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Demo live at: [e.s.codes.com](https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/)
 
-## Learn More
+## Codebase
 
-To learn more about Next.js, take a look at the following resources:
+### Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The entire codebase consists in **Javascript**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here is a list of technologies used:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **React**: Front-end framework
+- **NEXTJS** : Gatsby react framework
+- **Taildind** : CSS Framework
+- **Contentful**: CMS being used to get all of the data
+- **Grapqhl**: Graphql api by gatsby to query needed data
+- **MDX** : This is to render each post indiviually 
