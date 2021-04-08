@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { buttonClasses } from '../hero/hero'
 
@@ -8,7 +9,11 @@ const Banner = () => {
         <h3 className="uppercase text-2xl leading-relaxed md:text-center "> Subscribe now to get special features</h3>
         <p className="uppercase leading-relaxed md:text-center">subscribe and start learning</p>
       </div>
-     <button className={`${buttonClasses} px-20 py-6 uppercase md:self-center justify-self-center flex mx-auto focus:ring focus:shadow md:transform md:hover:scale-105 md:motion-reduce:transform-none transition duration-700 ease-in-out  md:hover:-translate-y-6`}> Subscribe now</button>
+
+      <Link href="/contact">
+        <a className={`${buttonClasses} px-20 py-6 uppercase md:self-center justify-self-center flex mx-auto focus:ring focus:shadow md:transform md:hover:scale-105 md:motion-reduce:transform-none transition duration-700 ease-in-out  md:hover:-translate-y-6`}> Subscribe now</a>
+      </Link>
+
     </div>
   )
 }

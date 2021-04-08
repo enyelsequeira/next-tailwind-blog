@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { FC } from 'react'
 import { techList } from '../../utils/constants/constants'
 const spanClasses: string = `text-red-600 font-bold uppercase text-xl`
@@ -13,7 +14,10 @@ const Hero: FC = () => {
         <div className=" w-full lg:w-3/4 p-2 md:p-6 ">
           <p className={paragraphClasses}>Are you interested in reading and learning more about coding? then you have arrived at the right place <span className={`${spanClasses}`}>e.s.codes</span></p>
           <p className={paragraphClasses}>Providing blogs articles every other days on technologies, like <span className={`${spanClasses} `}>html</span>, <span className={`${spanClasses} `}>css</span>, <span className={`${spanClasses} `}>Javascript</span> <span className={`${spanClasses} `} >React</span>, <span>node</span> and more 😀!!</p>
+          <Link href="/blog">
           <button className={buttonClasses}>Get Started</button>
+          </Link>
+         
         </div>
         <div className="lg:w-3/5 md:w-2/3 md:self-center w-full border-2 flex p-4 my-4 lg:m-0" >
           <Image className="w-full" src="/hero-image.png" width={1200}

@@ -18,7 +18,7 @@ const Social = () => {
       <p className={`${paragraphClasses} text-4xl`}>Follow for more content 😀</p>
       <ul className={socialList}>
 
-        <a className={socialItem} href="" >
+        <a className={socialItem} href="https://twitter.com/enyelsequeira?lang=en" target="_blank" >
           <li className={socialLink}>
             <span className="flex justify-end w-3/6 md:w-4/12">
               Twitter
@@ -30,7 +30,7 @@ const Social = () => {
           </li>
         </a>
 
-        <a href="" className={socialItem}>
+        <a href="https://www.instagram.com/e.s.codes/?hl=en" className={socialItem} target="_blank">
           <li className={socialLink}>
             <span className="flex justify-end w-3/6 md:w-4/12">
               Instagram
@@ -42,7 +42,7 @@ const Social = () => {
           </li>
         </a>
 
-        <a href="" className={socialItem}>
+        <a href="https://www.facebook.com/enyel.sequeira/" className={socialItem} target="_blank">
           <li className={socialLink}>
             <span className="flex justify-end w-3/6 md:w-4/12">
 
@@ -55,7 +55,7 @@ const Social = () => {
           </li>
         </a>
 
-        <a href="" className={socialItem}>
+        <a href="https://github.com/enyelsequeira" className={socialItem} target="_blank">
           <li className={socialLink}>
             <span className="flex justify-end w-3/6 md:w-4/12">
 

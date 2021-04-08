@@ -59,7 +59,7 @@ const Header: FC = () => {
                     </Link>
                   </li>
 
-                  <li className="nav-item p-1">
+                  <li className="nav-item px-2 md:px-1 self-start md:self-center">
                     <DarkModeBtn />
                   </li>
                 </ul>
