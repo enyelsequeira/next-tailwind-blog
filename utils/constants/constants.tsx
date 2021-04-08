@@ -52,3 +52,19 @@ export const techList: ListContent[] = [
     id: 7
   },
 ]
+// TODO maybe implement a better way to handle the footer code
+// interface Footer {
+//   title: string,
+//   sub: string,
+//   subOne: string,
+//   subTwo: string
+// }
+
+// export const FooterList: Footer[]=[
+//   {
+//     title: "About",
+//     sub: "story",
+
+//   },
+
+// ]

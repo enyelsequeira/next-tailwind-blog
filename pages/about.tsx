@@ -22,14 +22,14 @@ const About = ({ data, listData }) => {
   
    
   </Head>
-    <section className="flex flex-col md:grid md:grid-cols-4  my-4 p-2 md:p-4 gap-3">
+    <section id="about" className="flex flex-col md:grid md:grid-cols-4  my-4 p-2 md:p-4 gap-3">
       <div className="p-2 rounded-lg md:col-start-1 md:self-center md:col-end-3 ">
         <Image className="rounded-2xl shadow-lg shadow-inner" width="700" height="500 " src={data.aboutHero.aboutMe.links.assets.block[0].url} />
       </div>
       <Body {...data} />
       <TechStack techStack={listData.techStack} />
       <div className="flex flex-col lg:my-6 md:col-start-1 md:col-end-5 lg:grid md:grid-cols-3 md:grid-rows-testimonials md:gap-3">
-        <p className="text-3xl text-center col-span-4 my-4 font-display">Testimonials</p>
+        <p id="testimonials" className="text-3xl text-center col-span-4 my-4 font-display">Testimonials</p>
       {testimonials.map((testimonial: Testimonial) => {
         return  <TestimonialCards key={testimonial.id} testimonial={testimonial} />
       })}

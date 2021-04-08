@@ -1,4 +1,8 @@
+import Link from 'next/link'
 import React from 'react'
+
+const titleClasses = `font-display font-bold`
+const listItemClasses = "font-body font-light cursor-pointer"
 
 const Footer = () => {
   return (
@@ -7,24 +11,42 @@ const Footer = () => {
         <ul className="flex flex-wrap justify-between p-2 lg:px-20">
 
           <div className="my-2">
-            <p className="font-display font-bold">Title</p>
-            <li className="font-body font-light">story</li>
-            <li className="font-body font-light">stack</li>
-            <li className="font-body font-light">Testimonials</li>
+            <p className={titleClasses}>About</p>
+            <Link href="/about/#about">
+            <li className={listItemClasses}>story</li>
+            </Link>
+            <Link href="/about/#stack">
+            <li className={listItemClasses}>Stack</li>
+            </Link>
+            
+            <Link href="/about/#testimonials">
+            <li className={listItemClasses}>Testimonials</li>
+            </Link>
+          
+          </div>
+
+    
+          <div className="my-2">
+            <p className={titleClasses}>Projects</p>
+            <Link href="/">
+            <li className={listItemClasses}>TBD</li>
+            </Link>
+            <Link href="/">
+            <li className={listItemClasses}>TBD</li>
+            </Link>
+            <Link href="/">
+            <li className={listItemClasses}>TBD</li>
+            </Link>
+            
           </div>
 
           <div className="my-2">
-            <p className="font-display font-bold">Title</p>
-            <li className="font-body font-light">story</li>
-            <li className="font-body font-light">stack</li>
-            <li className="font-body font-light">Testimonials</li>
-          </div>
-
-          <div className="my-2">
-            <p className="font-display font-bold">Title</p>
-            <li className="font-body font-light">story</li>
-            <li className="font-body font-light">stack</li>
-            <li className="font-body font-light">Testimonials</li>
+            <p className={titleClasses}>Contact</p>
+            <Link href="/contact">
+            <li className={listItemClasses}>Email</li>
+            </Link>
+            
+            
           </div>
 
           <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
