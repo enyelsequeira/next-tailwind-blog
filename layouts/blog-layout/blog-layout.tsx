@@ -18,13 +18,13 @@ const BlogLayout: FC<Props> = ({ data, children }) => {
         {/* TODO I have to change the links to use the actual blog posts  */}
         <div className="p-4 text-3xl flex items-center md:items-start md:flex-col">
           <p className="text-2xl my-2">Share</p>
-          <a href={`https://twitter.com/share?text=${data.title} by: @E.S.Codes=${"enyelsequeira.com"}`}
+          <a href={`https://twitter.com/share?text=${data.title} by: @E.S.Codes=${"https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/"}`}
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Share on Twitter' >
             <AiFillTwitterSquare className="md:mb-4 mx-2 md:mx-0" />
           </a>
-          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${'sitegoeshere'}`}
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${'https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/'}`}
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Share on LinkedIn'>
